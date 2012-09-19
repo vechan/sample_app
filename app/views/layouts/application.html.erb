@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= (yield(:title) %></title>
+    <title><%= yield(:title) %></title>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %> 
-    <!--[if lt IE 9]>
-    <!--script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script-->
-    <![endif]-->
+    <%= render 'layouts/shim' %>    
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <!--header class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to "sample app", '#', id: "logo" %>
-          <nav>
-            <ul class="nav pull-right">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Sign in</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header-->
-    
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
+
