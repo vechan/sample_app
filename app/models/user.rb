@@ -15,7 +15,7 @@ module ExampleMixin
   end
 
   def try_it(user)
-    puts "befor_esave:: #{user.email}"
+    puts "before_save:: #{user.email}"
   end
   
   def mothod_missing(method_name, instance)
