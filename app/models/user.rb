@@ -9,24 +9,24 @@
 #  updated_at :datetime         not null
 #
 
-module ExampleMixin
-  def self.incuded(obj)
-    puts "ExampleMixin included:: obj: #{obj.inspec}"
-  end
+#module ExampleMixin
+#  def self.incuded(obj)
+#    puts "ExampleMixin included:: obj: #{obj.inspec}"
+#  end
 
-  def try_it(user)
-    puts "before_save:: #{user.email}"
-  end
+#  def try_it(user)
+#    puts "before_save:: #{user.email}"
+#  end
   
-  def mothod_missing(method_name, instance)
-    puts "ExampleMixin::method_missing :: arg1: #{method_name}, args2: #{instance}
-    m = /try_/.match method_name
-    case m[1]
-      when "that"
-         puts "dispatch to some other class or method.."
-    end
-  end
-end
+#  def mothod_missing(method_name, instance)
+#    puts "ExampleMixin::method_missing :: arg1: #{method_name}, args2: #{instance}
+#    m = /try_/.match method_name
+#    case m[1]
+#      when "that"
+#         puts "dispatch to some other class or method.."
+#    end
+#  end
+#end
 
 class User < ActiveRecord::Base
   #include ::ExampleMixin
